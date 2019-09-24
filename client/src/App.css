@@ -1,0 +1,74 @@
+
+
+/* BACKGROUND STRONY */
+body {
+  background:white;
+  color:black;
+  margin-top:0;
+}
+.background_2 {
+  background:url("http://feastorfood.co.uk/images/poster.jpg");
+  color:white;
+  text-align:center;
+  height:450px;
+}
+
+
+.center_title {
+  text-align:center;
+  font-size:70px;
+}
+
+.center{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+}
+
+.table {
+  font-family: 'Manjari', sans-serif;
+  text-align:center;
+  padding:8px;
+  margin-top:25px;
+  height:auto;
+  width:auto;
+  border-style: solid;
+  border-width:5px;
+  border-radius: 75px;
+  border-color:#bd0003;
+}
+
+.cardButton {
+  font-family: 'Manjari', sans-serif;
+  font-size:20px;
+  color:black;
+  background:white;
+  width:100px;
+  height:50px;
+  border:none;
+  border-style: solid;
+  border-color:#bd0003;
+}
+.cardButton:hover {
+  background:#bd0003;
+  border-style: solid;
+  border-color:#bd0003;
+}
+.cardButton:focus {
+}
+
+
+.Choosed-Tables{
+  color:#bd0003;
+  font-family: 'Manjari', sans-serif;
+}
+
+.form-titles{
+  font-family: 'Manjari', sans-serif;
+  font-size:25px;
+}
+@media (min-width: 268px){
+.container {
+    max-width: 1050px;
+}
+}
