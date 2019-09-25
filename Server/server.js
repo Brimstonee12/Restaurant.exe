@@ -1,13 +1,28 @@
 const express = require('express');
-const {customers} = require('./serverData')
 const app = express();
+const mongoose = require('mongoose')
+const cors = require('cors')
+const ReservedRouter = require('./routes/Reserved');
+const TablesAVRouter = require('./routes/TablesAV');
 
 
+app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
-app.use('/api/customers',require('./serverComp'));
-app.use('/api/ReservedTables',require('./serverReserved'));
+//CONNECT TO DB
+mongoose.connect('mongodb+srv://Brimstonee12:huaweip29l@respository-mmcvv.mongodb.net/test?retryWrites=true&w=majority',
+ {useNewUrlParser: true, useCreateIndex: true,useUnifiedTopology: true });
+
+//CONSOLE CONNECT INFO
+const connection = mongoose.connection;
+connection.once('open', () => {
+  console.log("MongoDB database connection established successfully");
+})
+
+//USE COMPONENTS
+app.use('/reserved', ReservedRouter);
+app.use('/tablesav', TablesAVRouter);
 
 
 const port = 5000;

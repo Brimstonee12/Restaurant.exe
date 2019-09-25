@@ -18,7 +18,7 @@ class App extends React.Component {
 
 
   componentDidMount() {
-    fetch('/api/customers')
+    fetch('/tablesav')
       .then(res => res.json())
       .then(FetchData => this.setState({FetchData}, () => console.log('Customers fetched...',FetchData)));
   }
@@ -33,12 +33,12 @@ class App extends React.Component {
       body.FetchData.map(ItemF => {
           if(body.Tables.includes(ItemF.table1)){
 
-            fetch(`/api/customers/${ItemF.id}`, {
-               method:'PUT',
+            fetch(`/tablesav/update/${ItemF._id}`, {
+               method:'POST',
                headers: {'Content-Type': 'application/json'},
                body: JSON.stringify({available: 'Not Available'})
             })
-            fetch('/api/ReservedTables/', {
+            fetch('/reserved/add', {
                method:'POST',
                headers: {'Content-Type': 'application/json'},
                body: JSON.stringify({
@@ -66,7 +66,7 @@ class App extends React.Component {
     const body = this.state
 
 //LOOPUJE CALE API I WKLADA DO PROPSOW
-     let All_API_Test = body.FetchData.map(Item => <TableProps key={Item.id} table={Item.table1}
+     let All_API_Test = body.FetchData.map(Item => <TableProps key={Item._id} table={Item.table1}
         sits={Item.sits} available={Item.available} button= {() =>{
 
 //SILNIK DODAWANIA STOLIKOW
