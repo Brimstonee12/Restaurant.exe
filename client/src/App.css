@@ -1,6 +1,5 @@
 
-
-/* BACKGROUND STRONY */
+/* BACKGROUND  */
 body {
   background:white;
   color:black;
@@ -13,7 +12,7 @@ body {
   height:450px;
 }
 
-
+/* WEBSITE CONTENT ######################## */
 .center_title {
   text-align:center;
   font-size:70px;
@@ -25,19 +24,39 @@ body {
   justify-content:space-between;
 }
 
-.table {
+.Choosed-Tables{
+  color:#bd0003;
   font-family: 'Manjari', sans-serif;
-  text-align:center;
-  padding:8px;
-  margin-top:25px;
-  height:auto;
-  width:auto;
-  border-style: solid;
-  border-width:5px;
-  border-radius: 75px;
-  border-color:#bd0003;
 }
 
+.form-titles{
+  font-family: 'Manjari', sans-serif;
+  font-size:25px;
+}
+
+
+.SubmitButton{
+  background:#bd0003;
+  border-width:8px;
+  padding:0px;
+  border-radius:28px;
+  border-style: solid;
+  border-color:#bd0003;
+  height:auto;
+  font-size:40px;
+  width: 40%;
+  margin-left: 30%;
+  margin-right: 30%
+}
+.SubmitButton:hover{
+  border-radius:28px;
+  background:white;
+  border-style: solid;
+  border-color:#bd0003;
+  color:#bd0003
+}
+
+/* TABLE PROPS #############################*/
 .cardButton {
   font-family: 'Manjari', sans-serif;
   font-size:20px;
@@ -54,19 +73,28 @@ body {
   border-style: solid;
   border-color:#bd0003;
 }
-.cardButton:focus {
+
+.cardButton::-moz-focus-inner {
+  border: none;
 }
 
-
-.Choosed-Tables{
-  color:#bd0003;
+.table {
   font-family: 'Manjari', sans-serif;
+  text-align:center;
+  padding:8px;
+  margin-top:25px;
+  height:auto;
+  width:auto;
+  border-style: solid;
+  border-width:5px;
+  border-radius: 75px;
+  border-color:#bd0003;
 }
 
-.form-titles{
-  font-family: 'Manjari', sans-serif;
-  font-size:25px;
-}
+
+
+
+/* WEBSITE MEDIA ###################### */
 @media (min-width: 268px){
 .container {
     max-width: 1050px;

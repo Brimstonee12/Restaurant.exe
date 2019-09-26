@@ -6,11 +6,11 @@ import '../App.css'
 function TableProps(props){
   return(
     <div className="table">
-    <h2 className="content-one">{props.table}</h2>
-      <h2 className="content-one">{props.sits}</h2>
-        <h2 className="content-two">{props.busy}</h2>
-        <h2 className="content-two">{props.available}</h2>
-        <Button onClick={props.button} className="cardButton">Schulde</Button>
+    <h2>{props.table}</h2>
+      <h2>{props.sits}</h2>
+        <h2>{props.busy}</h2>
+        <h2>{props.available}</h2>
+        <Button onClick={props.button} className="cardButton">Reserve</Button>
     </div>
   )
 }

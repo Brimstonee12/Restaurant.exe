@@ -65,15 +65,19 @@ class App extends React.Component {
   render() {
     const body = this.state
 
-//LOOPUJE CALE API I WKLADA DO PROPSOW
+//LOOP FETCHED API AND PUT IT TO PROPS
      let All_API_Test = body.FetchData.map(Item => <TableProps key={Item._id} table={Item.table1}
         sits={Item.sits} available={Item.available} button= {() =>{
 
-//SILNIK DODAWANIA STOLIKOW
-      if(body.Tables.some( i => Item.table1 === i )){
-          this.setState(prevState =>{return{Tables:[...prevState.Tables - Item.table1 ] }})
-      }else{
-          this.setState(prevState =>{return{Tables:[...prevState.Tables, Item.table1] }})
+//ADD TABLE
+        if(Item.available === 'Not Available'){
+          null
+        }else{
+          if(body.Tables.some( i => Item.table1 === i )){
+              this.setState(prevState =>{return{Tables:[...prevState.Tables - Item.table1 ] }})
+          }else{
+              this.setState(prevState =>{return{Tables:[...prevState.Tables, Item.table1] }})
+            }
         }
       }}
     />)
@@ -102,8 +106,6 @@ class App extends React.Component {
         handlechange2={this.handleChange2}
         />
 
-        <h1>{body.FormEmail}</h1>
-        <h1>{body.FormText}</h1>
 
     </Container>
   </div>
