@@ -19,7 +19,7 @@ class App extends React.Component {
 
 
   componentDidMount() {
-    fetch('/tablesav')
+    fetch('/tablesav/get/')
       .then(res => res.json())
       .then(FetchData => this.setState({FetchData}, () => console.log('Customers fetched...',FetchData)));
   }
