@@ -4,12 +4,12 @@
   "description": "",
   "main": "Server/server.js",
   "scripts": {
-    "client-install": "cd client && npm install",
-    "start": "node Server/server.js",
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
-    "dev": " concurrently \"npm run server\" \"npm run client\""
+    "dev": " concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client  && npm run build --prefix client"  },
   },
   "author": "Brimstonee12",
   "license": "",
