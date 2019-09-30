@@ -7,11 +7,8 @@ body {
 }
 .background_2 {
   background:url("https://static.wixstatic.com/media/3ceca7_ce9764db2f4d4070bb9eafb92d8622e8.jpeg");
-  /* background:url("https://www.hiamag.com/sites/default/files/article/06/04/2017/5265391-1996498733.jpeg"); */
-  /* background:grey; */
   color:white;
   text-align:center;
-  /* height:450px; */
   height:auto;
 }
 /* ICONS ######################## */
