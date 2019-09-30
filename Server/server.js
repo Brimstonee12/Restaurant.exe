@@ -15,10 +15,11 @@ app.use(express.static(path.join(__dirname,'client/build')))
 
 if(process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, 'client/build')));
-    app.get('*', (req, res) => {    res.sendfile(path.join(__dirname = 'client/build/index.html'));
+    app.get('*', (req, res) => {res.sendfile(path.join(__dirname = 'client/build/index.html'));
       })}
 
-app.get('*', (req, res) => {  res.sendFile(path.join(__dirname+'/client/public/index.html'));})
+// app.get('*', (req, res) => {  res.sendFile(path.join(__dirname+'/client/public/index.html'))})
+
 //CONNECT TO DB
 mongoose.connect('mongodb+srv://Brimstonee12:huaweip29l@respository-mmcvv.mongodb.net/test?retryWrites=true&w=majority',
  {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true  });
