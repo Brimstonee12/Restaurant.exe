@@ -4,11 +4,14 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const ReservedRouter = require('./routes/Reserved');
 const TablesAVRouter = require('./routes/TablesAV');
-
+const path = require('path');
 
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
+
+app.use(express.static(path.join(__dirname,'client/public/')))
+
 
 //CONNECT TO DB
 mongoose.connect('mongodb+srv://Brimstonee12:huaweip29l@respository-mmcvv.mongodb.net/test?retryWrites=true&w=majority',
