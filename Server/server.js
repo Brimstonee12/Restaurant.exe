@@ -34,3 +34,6 @@ connection.once('open', () => {
 //USE COMPONENTS
 app.use('/reserved', ReservedRouter);
 app.use('/tablesav', TablesAVRouter);
+
+
+app.listen(process.env.PORT || 5000)
