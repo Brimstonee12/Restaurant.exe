@@ -36,6 +36,6 @@ app.use('/reserved', ReservedRouter);
 app.use('/tablesav', TablesAVRouter);
 
 
-const port = 5000;
-
-app.listen(port, () => `Server running on port ${port}`);
+// const port = 5000;
+//
+// app.listen(port, () => `Server running on port ${port}`);
