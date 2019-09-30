@@ -11,16 +11,6 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
 
-if (process.env.NODE_ENV === 'production') {
-  // Set static folder
-  app.use(express.static('../client/build'));
-
-  app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../','client', 'build', 'index.html'));
-  });
-}
-
-
 //CONNECT TO DB
 mongoose.connect('mongodb+srv://Brimstonee12:huaweip29l@respository-mmcvv.mongodb.net/test?retryWrites=true&w=majority',
  {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true  });
@@ -31,11 +21,19 @@ connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
 })
 
-
 //USE COMPONENTS
 app.use('/reserved', ReservedRouter);
 app.use('/tablesav', TablesAVRouter);
 
+
+if (process.env.NODE_ENV === 'production') {
+  // Set static folder
+  app.use(express.static('../client/build'));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../','client', 'build', 'index.html'));
+  });
+}
 
 const port = process.env.PORT || 5000;
 

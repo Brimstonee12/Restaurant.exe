@@ -3,7 +3,7 @@ let TablesAV_Models = require('../models/TablesAV.model');
 
 
 //GET ALL TABLES
-router.route('/get').get((req, res) => {
+router.route('/').get((req, res) => {
   TablesAV_Models.find()
     .then(tablesav => res.json(tablesav))
     .catch(err => res.status(400).json('Error: ' + err));
