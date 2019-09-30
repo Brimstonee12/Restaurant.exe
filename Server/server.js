@@ -11,8 +11,6 @@ app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
 
-// app.use(express.static(path.join(__dirname,'client/build')))
-
 if (process.env.NODE_ENV === 'production') {
   // Set static folder
   app.use(express.static('../client/build'));
