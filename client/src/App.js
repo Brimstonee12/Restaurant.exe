@@ -3,6 +3,7 @@ import './App.css'
 import {Container,Form,Button} from 'react-bootstrap'
 import TableProps from './components/AppProps'
 import TableForm from './components/Forms'
+import { SocialIcon } from 'react-social-icons';
 
 
 class App extends React.Component {
@@ -85,13 +86,17 @@ class App extends React.Component {
 
     return (
     <div>
-      <div className="background_2">
-        <h1 className="center_title">Restaurant De la Ves</h1>
-        <h1>Shulde you table online or by calling us tel: 777 777 777</h1>
+      <div className="background_2 ">
+      <div className="Icons">
+        <h3 className="Icon1"><SocialIcon url="https://www.linkedin.com/in/tomasz-karli%C5%84ski-1b36b717a/" fgColor="white"/></h3>
+        <h3 className="Icon1"><SocialIcon url="https://github.com/Brimstonee12" fgColor="white"/></h3>
+      </div>
+        <h1 className="center_title">Restaurant.Exe</h1>
+        <h1>Reserve your table online or by calling us tel: 777 777 777</h1>
         <br/>
         <h1>Reserve Table for today night</h1>
         <br/>
-        </div>
+      </div>
      <Container>
      <div className="center">
         {All_API_Test}
@@ -105,7 +110,6 @@ class App extends React.Component {
         handlechange={this.handleChange}
         handlechange2={this.handleChange2}
         />
-
 
     </Container>
   </div>

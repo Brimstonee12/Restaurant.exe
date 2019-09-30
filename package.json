@@ -13,7 +13,9 @@
   "author": "Brimstonee12",
   "license": "",
   "devDependencies": {
-    "nodemon": "^1.14.6"
+    "@fortawesome/fontawesome-free": "^5.11.2",
+    "nodemon": "^1.14.6",
+    "react-social-icons": "^4.1.0"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -26,6 +28,7 @@
     "express-router": "0.0.1",
     "mongoose": "^5.7.1",
     "react-bootstrap": "^1.0.0-beta.12",
+    "react-icons": "^3.7.0",
     "router-express": "^1.5.2",
     "uuid": "^3.3.3"
   }

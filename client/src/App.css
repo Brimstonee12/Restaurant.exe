@@ -6,16 +6,28 @@ body {
   margin-top:0;
 }
 .background_2 {
-  background:url("http://feastorfood.co.uk/images/poster.jpg");
+  background:url("https://static.wixstatic.com/media/3ceca7_ce9764db2f4d4070bb9eafb92d8622e8.jpeg");
+  /* background:url("https://www.hiamag.com/sites/default/files/article/06/04/2017/5265391-1996498733.jpeg"); */
+  /* background:grey; */
   color:white;
   text-align:center;
-  height:450px;
+  /* height:450px; */
+  height:auto;
 }
-
+/* ICONS ######################## */
+.Icons{
+  float:right;
+}
+.Icon1{
+  display:inline-block;
+  padding:6px 10px 0px 0px;
+}
 /* WEBSITE CONTENT ######################## */
 .center_title {
   text-align:center;
   font-size:70px;
+  clear:both;
+  margin-bottom:45px;
 }
 
 .center{
@@ -34,11 +46,10 @@ body {
   font-size:25px;
 }
 
-
 .SubmitButton{
   background:#bd0003;
   border-width:8px;
-  padding:0px;
+  padding:0px 0px 6px 0px;
   border-radius:28px;
   border-style: solid;
   border-color:#bd0003;
@@ -46,7 +57,7 @@ body {
   font-size:40px;
   width: 40%;
   margin-left: 30%;
-  margin-right: 30%
+  margin-right: 30%;
 }
 .SubmitButton:hover{
   border-radius:28px;
@@ -54,6 +65,11 @@ body {
   border-style: solid;
   border-color:#bd0003;
   color:#bd0003
+}
+.SubmitButton:active{
+  background:white !important;
+  border-color:#980002 !important;
+  color:#980002 !important;
 }
 
 /* TABLE PROPS #############################*/
@@ -67,15 +83,16 @@ body {
   border:none;
   border-style: solid;
   border-color:#bd0003;
+
 }
 .cardButton:hover {
   background:#bd0003;
   border-style: solid;
   border-color:#bd0003;
 }
-
-.cardButton::-moz-focus-inner {
-  border: none;
+.cardButton:active {
+  background:#980002 !important;
+  border-color:#980002 !important;
 }
 
 .table {
@@ -90,7 +107,6 @@ body {
   border-radius: 75px;
   border-color:#bd0003;
 }
-
 
 
 

@@ -12,13 +12,14 @@ app.use(express.urlencoded({extended: false}))
 
 //CONNECT TO DB
 mongoose.connect('mongodb+srv://Brimstonee12:huaweip29l@respository-mmcvv.mongodb.net/test?retryWrites=true&w=majority',
- {useNewUrlParser: true, useCreateIndex: true,useUnifiedTopology: true });
+ {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true  });
 
 //CONSOLE CONNECT INFO
 const connection = mongoose.connection;
 connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
 })
+
 
 //USE COMPONENTS
 app.use('/reserved', ReservedRouter);
