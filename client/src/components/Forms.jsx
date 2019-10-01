@@ -12,7 +12,7 @@ render(){
       <Form.Control onChange={this.props.handlechange} type="email" placeholder="name@example.com" value={this.props.ValueEmail} />
     </Form.Group>
     <Form.Group>
-      <Form.Label className="form-titles">Choseed Tables</Form.Label>
+      <Form.Label className="form-titles">Choosed Tables</Form.Label>
       <h4 class="Choosed-Tables">{this.props.Tables + " "}</h4>
     </Form.Group>
     <Form.Group controlId="exampleForm.ControlTextarea1">

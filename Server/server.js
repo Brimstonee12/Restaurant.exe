@@ -27,7 +27,7 @@ app.use('/tablesav', TablesAVRouter);
 
 
 if (process.env.NODE_ENV === 'production') {
-  // Set static folder
+  //SET STATIC FOLDER
   app.use(express.static('../client/build'));
 
   app.get('*', (req, res) => {
