@@ -13,7 +13,8 @@ class App extends React.Component {
       FetchData:[],
       Tables:[],
       FormText:"",
-      FormEmail:""
+      FormEmail:"",
+      IsLoading:"Loading..."
     }
   }
 
@@ -22,7 +23,15 @@ class App extends React.Component {
     fetch('/tablesav')
       .then(res => res.json())
       .then(FetchData => this.setState({FetchData}, () => console.log('Customers fetched...',FetchData)));
-  }
+
+      setTimeout(() =>{
+        this.setState({IsLoading:"Something went wrong :("})
+      }, 10000)
+    }
+
+
+
+
 
   handleChange = event =>{this.setState({FormEmail: event.target.value})}
   handleChange2 = event =>{this.setState({FormText: event.target.value})}
@@ -99,7 +108,7 @@ class App extends React.Component {
      <Container>
      <div className="center">
         {All_API_Test.length === 0 ?
-        <h2>Loading...</h2>:
+        <h2>{body.IsLoading}</h2>:
          All_API_Test}
      </div>
      <hr/>
