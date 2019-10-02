@@ -69,7 +69,6 @@ class App extends React.Component {
 //LOOP FETCHED API AND PUT IT TO PROPS
      let All_API_Test = body.FetchData.map(Item => <TableProps key={Item._id} table={Item.table1}
         sits={Item.sits} available={Item.available} button= {() =>{
-
 //ADD TABLE
         if(Item.available === 'Not Available'){
           null
@@ -99,7 +98,9 @@ class App extends React.Component {
       </div>
      <Container>
      <div className="center">
-        {All_API_Test}
+        {All_API_Test.length === 0 ?
+        <h2>Loading...</h2>:
+         All_API_Test}
      </div>
      <hr/>
         <TableForm
