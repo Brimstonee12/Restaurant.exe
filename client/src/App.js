@@ -25,12 +25,13 @@ class App extends React.Component {
       .then(FetchData => this.setState({FetchData}, () => console.log('Customers fetched...',FetchData)));
 
       setTimeout(() =>{
+        this.setState({IsLoading:"Its only free tier DB, give it some time.."})
+      }, 9000)
+      setTimeout(() =>{
         this.setState({IsLoading:"Something went wrong :("})
-      }, 10000)
+      }, 25000)
+
     }
-
-
-
 
 
   handleChange = event =>{this.setState({FormEmail: event.target.value})}

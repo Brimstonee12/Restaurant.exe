@@ -5,6 +5,7 @@ const cors = require('cors')
 const ReservedRouter = require('./routes/Reserved');
 const TablesAVRouter = require('./routes/TablesAV');
 const path = require('path');
+const db = require ('./config/keys').mongoURI
 
 app.use(cors())
 app.use(express.json())
@@ -12,8 +13,10 @@ app.use(express.urlencoded({extended: false}))
 
 
 //CONNECT TO DB
-mongoose.connect('mongodb+srv://Brimstonee12:huaweip29l@respository-mmcvv.mongodb.net/test?retryWrites=true&w=majority',
- {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true  });
+mongoose.connect(db,{useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true  })
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log(err))
+
 
 //CONSOLE CONNECT INFO
 const connection = mongoose.connection;
