@@ -29,6 +29,7 @@
     "express": "^4.16.2",
     "express-router": "0.0.1",
     "mongoose": "^5.7.1",
+    "react-alert": "^5.5.0",
     "react-bootstrap": "^1.0.0-beta.12",
     "react-icons": "^3.7.0",
     "router-express": "^1.5.2",

@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
 import './App.css'
-import {Container,Form,Button} from 'react-bootstrap'
+import {Container,Form,Button,Alert} from 'react-bootstrap'
 import TableProps from './components/AppProps'
 import TableForm from './components/Forms'
 import { SocialIcon } from 'react-social-icons';
+
 
 
 class App extends React.Component {
@@ -62,15 +63,15 @@ class App extends React.Component {
           }})
         }
   else if(body.FormEmail.length > 0 && body.Tables.length === 0){
-    alert('Please choose table to reserve')
+    alert('Please select table to reserve')
   }
   else if(body.FormEmail.length === 0 && body.Tables.length > 0){
     alert('Please type your email adress')
   }else{
-    alert('Email field and Table in required!')
+    alert('Email field and Table are required')
   }
   this.setState({Tables:[]})
-    }
+}
 
 
   render() {
@@ -94,25 +95,25 @@ class App extends React.Component {
 
 
     return (
-    <div>
-      <div className="background_2 ">
+  <div>
+    <div className="background_2 ">
       <div className="Icons">
         <h3 className="Icon1"><SocialIcon url="https://www.linkedin.com/in/tomasz-karli%C5%84ski-1b36b717a/" fgColor="white"/></h3>
         <h3 className="Icon1"><SocialIcon url="https://github.com/Brimstonee12" fgColor="white"/></h3>
       </div>
-        <h1 className="center_title">Restaurant.Exe</h1>
+        <h1 className="center_title">Restaurant. Exe</h1>
         <h1>Reserve your table online or by calling us tel: 777 777 777</h1>
         <br/>
         <h1>Reserve Table for today night</h1>
         <br/>
-      </div>
-     <Container>
-     <div className="center">
+    </div>
+    <Container>
+    <div className="center">
         {All_API_Test.length === 0 ?
         <h2>{body.IsLoading}</h2>:
          All_API_Test}
-     </div>
-     <hr/>
+    </div>
+    <hr/>
         <TableForm
         Tables={body.Tables}
         Button={this.Confirm}
@@ -121,6 +122,7 @@ class App extends React.Component {
         handlechange={this.handleChange}
         handlechange2={this.handleChange2}
         />
+
 
     </Container>
   </div>
