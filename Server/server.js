@@ -15,9 +15,6 @@ app.use(express.urlencoded({extended: false}))
 
 dotenv.config();
 
-// const db = process.env.mongoURI
-//
-
 //CONNECT TO DB
 mongoose.connect(db,{useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true  })
   .then(() => console.log('MongoDB Connected'))
