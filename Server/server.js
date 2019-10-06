@@ -5,12 +5,18 @@ const cors = require('cors')
 const ReservedRouter = require('./routes/Reserved');
 const TablesAVRouter = require('./routes/TablesAV');
 const path = require('path');
-const db = require ('./config/keys').mongoURI
+const dotenv = require('dotenv')
+const db = require ('./config/app-env').mongoURI
+
 
 app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
+dotenv.config();
+
+// const db = process.env.mongoURI
+//
 
 //CONNECT TO DB
 mongoose.connect(db,{useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true  })
