@@ -19,7 +19,7 @@ render(){
       <Form.Label className="form-titles">Comments to reserve</Form.Label>
       <Form.Control onChange={this.props.handlechange2} as="textarea" rows="3" value={this.props.ValueText}  />
     </Form.Group>
-    <Form.Group>
+    <Form.Group className="center-submit-btn">
     <Button className="SubmitButton" type="submit" onClick={this.props.Button}>Reserve</Button>
     </Form.Group>
 

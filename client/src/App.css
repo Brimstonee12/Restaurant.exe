@@ -5,14 +5,14 @@ body {
   color:black;
   margin-top:0;
 }
+/* HEADING ################################################ */
 .background_2 {
   background:url("https://static.wixstatic.com/media/3ceca7_ce9764db2f4d4070bb9eafb92d8622e8.jpeg");
   color:white;
   text-align:center;
   height:auto;
-  width:100%
+  width:100%;
 }
-/* ICONS ######################## */
 .Icons{
   float:right;
 }
@@ -20,13 +20,29 @@ body {
   display:inline-block;
   padding:6px 10px 0px 0px;
 }
-/* WEBSITE CONTENT ######################## */
 .center_title {
   text-align:center;
-  font-size:70px;
   clear:both;
   margin-bottom:45px;
 }
+.heading-content{
+  font-size:2.4rem;
+}
+@media (max-width: 2800px){
+  .center_title{font-size:7em;}}
+
+@media (max-width: 1000px){
+  .center_title{font-size:5em;}}
+
+@media (max-width: 600px){
+  .center_title{font-size:3em;}}
+
+@media (max-width: 600px){
+  .heading-content{font-size:1.6em;}}
+
+
+
+/* WEBSITE CONTENT ######################## */
 
 .center{
   display:flex;
@@ -44,6 +60,10 @@ body {
   font-size:25px;
 }
 
+.center-submit-btn{
+  justify-content:center;
+  display:flex;
+}
 .SubmitButton{
   background:#bd0003;
   border-width:8px;
@@ -53,10 +73,7 @@ body {
   border-color:#bd0003;
   height:auto;
   font-size:40px;
-  margin-left: 30%;
-  margin-right: 30%;
   text-align:center;
-
 }
 .SubmitButton:hover{
   border-radius:28px;
@@ -117,12 +134,6 @@ body {
     max-width: 1050px;
 }
 }
-
-/* @media (min-width: 800px;){
-.background_2 {
-    width: 100%;
-}
-} */
 
 @media (min-width: 600px){
 .SubmitButton {

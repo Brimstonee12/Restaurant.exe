@@ -102,9 +102,9 @@ class App extends React.Component {
         <h3 className="Icon1"><SocialIcon url="https://github.com/Brimstonee12" fgColor="white"/></h3>
       </div>
         <h1 className="center_title">Restaurant. Exe</h1>
-        <h1>Reserve your table online or by calling us tel: 777 777 777</h1>
+        <h1 className="heading-content">Reserve your table online or by calling us tel: 777 777 777</h1>
         <br/>
-        <h1>Reserve Table for today night</h1>
+        <h1 className="heading-content">Reserve Table for today night</h1>
         <br/>
     </div>
     <Container>
